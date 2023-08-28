@@ -1,3 +1,8 @@
+.category-budgets {
+    display: flex;
+    justify-content: center;
+}
+
 *{
     margin:0;
     padding:0;
@@ -49,3 +54,115 @@ main{
 .icon, .link_text{
     font-size: 20px;
 }
+
+/* GoalsPage.css */
+
+.goals-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .goal-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .clickable-image {
+    flex: 0 0 30%; /* Each image takes up 30% of the available width */
+    margin: 10px;
+    text-align: center;
+    cursor: pointer; 
+  }
+  
+  .clickable-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+/* Literacy.css */
+
+.financial-literacy-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.financial-literacy-topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+  /* profile-container styles */
+.profile-container {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #f9f9f9; /* Background color */
+    border: 1px solid #ccc; /* Border for the container */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+  }
+  
+  /* Heading styles */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Heading text color */
+  }
+  
+  /* Input styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color for buttons */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Hover color */
+  }
+  
+  /* Optional: Add styles for form labels */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Optional: Add styles for error messages */
+  .error-message {
+    color: #ff0000; /* Error message text color */
+    margin-top: 5px;
+  }
+  
+  /* Optional: Customize link styles */
+  a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
