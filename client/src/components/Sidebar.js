@@ -26,7 +26,7 @@ const Sidebar = ({children}) => {
         },
         {
           path: '/literacy',
-          name: 'Personal Finance',
+          name: 'Financial Literacy',
           icon: <FontAwesomeIcon icon={faCoins} />,
         },
         {

@@ -72,17 +72,29 @@ main{
   }
   
   .clickable-image {
-    flex: 0 0 30%; /* Each image takes up 30% of the available width */
-    margin: 10px;
-    text-align: center;
-    cursor: pointer; 
+  flex: 0 0 30%; /* Each image takes up 30% of the available width */
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden; 
+  border: 1px solid #a5a0a0; 
+  transition: transform 0.3s, box-shadow 0.3s; 
+  position: relative; 
   }
   
   .clickable-image img {
     width: 100%;
     max-width: 100%;
     height: auto;
+    object-fit: cover; /* To maintain the aspect ratio of the image */
+    transition: transform 0.3s; /* To have a smooth transition */
   }
+
+  .clickable-image:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* To add a shadow effect on hover */
+    transform: scale(1.05); /* To zoom the box slightly in all directions */
+  }
+  
   
 /* Literacy.css */
 
