@@ -1,0 +1,41 @@
+/* HomePage.css */
+
+.filters-and-content {
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 20px; /* Add spacing between filters and content */
+  width: 100%;
+}
+
+.filters-and-content, .filters, .filters > div, .content {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Ensure the container takes the full width */
+}
+
+.filters > div {
+  flex: 1; /* This will allow each div in the filters to grow equally, filling the space */
+}
+
+.switch-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0; /* This will prevent the switch icons from growing and taking up extra space */
+}
+
+.content {
+  margin-top: 20px;
+  width: 100%; /* Ensure the content takes the full width */
+}
+
+.create-budget-button {
+  margin-top: 20px;
+}

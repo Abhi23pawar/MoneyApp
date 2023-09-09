@@ -8,7 +8,7 @@ const LiteracyPage = () => {
         imageSrc: '/images/budget.jpg', // Replace with the actual image source
       },
       {
-        title: 'Managing my personal finances',
+        title: 'Managing my finances',
         link: 'https://www.moneycrashers.com/smart-financial-money-moves-make-20s/',
         imageSrc: '/images/personalfinance.jpg', // Replace with the actual image source
       },
@@ -23,7 +23,7 @@ const LiteracyPage = () => {
         imageSrc: '/images/financialindependence.jpg', // Replace with the actual image source
       },
       {
-        title: 'Investing for the long run',
+        title: 'Long Term Investment',
         link: 'https://www.moneycrashers.com/investing-for-the-long-run/',
         imageSrc: '/images/investing.jpg', // Replace with the actual image source
       },

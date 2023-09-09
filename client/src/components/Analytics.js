@@ -3,15 +3,15 @@ import { Progress } from "antd";
 const Analytics = ({ allTransection }) => {
   // category
   const categories = [
-    "salary",
-    "tip",
-    "project",
-    "food",
-    "movie",
-    "bills",
-    "medical",
-    "fee",
-    "tax",
+             "salary",
+             "housing",
+             "transportation",
+             "food",
+             "savings",
+             "utilities",
+            "entertainment",
+             "clothingandpersonal",
+             "miscellaneous",
   ];
 
   // total transaction

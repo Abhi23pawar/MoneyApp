@@ -1,8 +1,3 @@
-.category-budgets {
-    display: flex;
-    justify-content: center;
-}
-
 *{
     margin:0;
     padding:0;
@@ -10,6 +5,7 @@
 }
 .container{
     display:flex;
+    
 }
 main{
     width: 100%;
@@ -29,6 +25,7 @@ main{
 }
 .logo{
     font-size: 30px;
+    color: #fff;
 }
 .bars{
     display: flex;

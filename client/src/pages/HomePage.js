@@ -43,7 +43,7 @@ const HomePage = () => {
       dataIndex: "category",
     },
     {
-      title: "Refrence",
+      title: "Reference",
       dataIndex: "refrence",
     },
     {
@@ -84,7 +84,7 @@ const HomePage = () => {
         setAllTransection(res.data);
         setLoading(false);
       } catch (error) {
-        message.error("Ftech Issue With Tranction");
+        message.error("Fetching Issue with Transcation");
       }
     };
     getAllTransactions();
@@ -140,6 +140,7 @@ const HomePage = () => {
   return (
     <Layout>
       {loading && <Spinner />}
+      <div classname="filters-and-content">
       <div className="filters">
         <div>
           <h6>Select Frequency</h6>
@@ -216,21 +217,21 @@ const HomePage = () => {
           </Form.Item>
           <Form.Item label="Category" name="category">
             <Select>
-              <Select.Option value="salary">Salary</Select.Option>
-              <Select.Option value="tip">Tip</Select.Option>
-              <Select.Option value="project">Project</Select.Option>
-              <Select.Option value="food">Food</Select.Option>
-              <Select.Option value="movie">Movie</Select.Option>
-              <Select.Option value="bills">Bills</Select.Option>
-              <Select.Option value="medical">Medical</Select.Option>
-              <Select.Option value="fee">Fee</Select.Option>
-              <Select.Option value="tax">TAX</Select.Option>
+             <Select.Option value="salary">Salary</Select.Option>
+             <Select.Option value="housing">Housing</Select.Option>
+             <Select.Option value="transportation">Transportation</Select.Option>
+             <Select.Option value="food">Food</Select.Option>
+             <Select.Option value="savings">Savings</Select.Option>
+             <Select.Option value="utilities">Utilities</Select.Option>
+             <Select.Option value="entertainment">Entertainment</Select.Option>
+             <Select.Option value="clothingandpersonal">Clothing and Personal Care</Select.Option>
+             <Select.Option value="miscellaneous">Miscellaneous</Select.Option>
             </Select>
           </Form.Item>
           <Form.Item label="Date" name="date">
             <Input type="date" />
           </Form.Item>
-          <Form.Item label="Refrence" name="refrence">
+          <Form.Item label="Reference" name="refrence">
             <Input type="text" required />
           </Form.Item>
           <Form.Item label="Description" name="description">
@@ -244,6 +245,7 @@ const HomePage = () => {
           </div>
         </Form>
       </Modal>
+      </div>
     </Layout>
   );
 };

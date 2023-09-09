@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import { Button, Modal, Input, Form, Select, InputNumber, DatePicker, message, Progress, Menu, Dropdown } from "antd";
+import styles from '../styles/ChallengePage.module.css';
 
 const ChallengePage = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -72,13 +73,15 @@ const ChallengePage = () => {
 
   return (
     <div>
-      <h1>Points Achieved: {challenges.reduce((sum, challenge) => sum + (challenge.rewardPoints || 0), 0)}</h1>
-      <h2>Challenges</h2>
-      <Button onClick={() => setShowCreateModal(true)}>Create Challenge</Button>
-     
+      <h1 className={styles.pageHeading}>Points Achieved: {challenges.reduce((sum, challenge) => sum + (challenge.rewardPoints || 0), 0)}</h1>
+      <h2 className={styles.pageHeading}>Challenges</h2>
+      <Button className={styles.createChallengeButton} onClick={() => setShowCreateModal(true)}>Create Challenge</Button>
+
+    <div className={styles.container}>
+
       {challenges.map((challenge, idx) => (
-    <div key={idx} style={{ marginTop: '20px', border: '1px solid #ddd', padding: '10px' }}>
-        <h3>{challenge.name}</h3>
+    <div key={idx} className={styles.challengeBox}>
+        <h3 className={styles.challengeTitle}>{challenge.name}</h3>
         
         {challenge.hasJoined ? (
             <Button disabled>Challenge Joined</Button>
@@ -191,7 +194,7 @@ const ChallengePage = () => {
         </Modal>
       )}
 
-
+    </div>
 
     </div>
   );

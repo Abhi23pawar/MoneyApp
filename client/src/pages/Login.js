@@ -5,8 +5,8 @@ import axios from "axios";
 import Spinner from "../components/Spinner";
 import "../styles/Loginpage.css";
 const Login = () => {
-  const img =
-    "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
+  {/*const img =;*/}
+  
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   //from submit
@@ -38,9 +38,9 @@ const Login = () => {
       <div className="login-page ">
         {loading && <Spinner />}
         <div className="row container">
-          <h1>Expsanse Managment System - MERN STACK</h1>
+          <h1>Budget Management</h1>
           <div className="col-md-6">
-            <img src={img} alt="login-img" width={"100%"} height="100%" />
+            <img src="/images/login.jpg" alt="login-img" width={"100%"} height="100%" />
           </div>
           <div className="col-md-4 login-form">
             <Form layout="vertical" onFinish={submitHandler}>
