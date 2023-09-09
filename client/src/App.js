@@ -11,6 +11,12 @@ import ProfilePage from './pages/ProfilePage.jsx';
 import GoalsPage from './pages/GoalsPage.jsx';
 import LiteracyPage from "./pages/Literacy.jsx";
 import ChallengePage from "./pages/Challenge.jsx";
+import MakingABudget from "./pages/MakingABudget.jsx";
+import ManagingFinances from "./pages/ManagingFinances.jsx";
+import GettingOutOfDebt from "./pages/GettingOutOfDebt.jsx";
+import FinancialIndependence from "./pages/FinancialIndependence.jsx";
+import LongTermInvestment from "./pages/LongTermInvestment.jsx";
+import SavingForRetirement from "./pages/SavingForRetirement.jsx";
 
 
 
@@ -36,6 +42,14 @@ function App() {
         <Route path="/goalsPage" element={<GoalsPage />} />
         <Route path="/literacy" element={<LiteracyPage />} />
         <Route path="/challenge" element={<ChallengePage />} />
+        
+        <Route path="/literacypage/makingabudget" element={<MakingABudget />} />
+        <Route path="/literacypage/managingfinances" element={<ManagingFinances />} />
+        <Route path="/literacypage/gettingoutofdebt" element={<GettingOutOfDebt />} />
+        <Route path="/literacypage/financialindependence" element={<FinancialIndependence />} />
+        <Route path="/literacypage/longterminvestment" element={<LongTermInvestment />} />
+        <Route path="/literacypage/savingforretirement" element={<SavingForRetirement />} />
+      
         
         <Route path="/" element={<Dashboard />} />
       </Routes>
