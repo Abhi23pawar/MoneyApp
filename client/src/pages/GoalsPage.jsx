@@ -28,7 +28,7 @@ const GoalsPage = () => {
     <div className="goals-page">
       <h1 className="title">Goals</h1>
 
-      <div className="goal-images">
+      <div className="common-images">
         {goalsData.map((goal, index) => (
           <div className="clickable-image" key={index} onClick={() => openForm(goal)}>
             <h2>{goal.title}</h2>
