@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Form, Input, Select, DatePicker, Button } from 'antd';
+import { Modal, Form, Input, DatePicker, Button } from 'antd';
 
 const GoalForm = ({ onClose, goal }) => {
   const [form] = Form.useForm();
@@ -38,19 +38,9 @@ const GoalForm = ({ onClose, goal }) => {
           <Input.TextArea />
         </Form.Item>
 
-        
-        <Form.Item
-            name="reminderInterval"
-            label="Reminder Interval"
-            rules={[{ required: true, message: "Please select a reminder interval" }]}
-          >
-            <Select placeholder="Select a reminder interval">
-              <Select.Option value="daily">Daily</Select.Option>
-              <Select.Option value="weekly">Weekly</Select.Option>
-              <Select.Option value="monthly">Monthly</Select.Option>
-            </Select>
-          </Form.Item>
-       
+        <Form.Item label="Reminder Interval" name="reminderInterval">
+          <Input />
+        </Form.Item>
 
         <Form.Item>
           <Button type="primary" htmlType="submit" className={isSubmitted ? 'submitted' : ''}>
