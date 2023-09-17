@@ -221,6 +221,11 @@ main{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    color: #000;
+    font-size: 18px;
+    letter-spacing: .01em;
+    line-height: 30px;
+    margin-bottom: 24px;
   }
   
   .literacy-text-container h1 {

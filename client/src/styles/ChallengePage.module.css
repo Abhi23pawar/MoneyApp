@@ -12,7 +12,7 @@
 }
 
 .createChallengeButton {
-    background-color: blue;  /* Blue background color */
+    background-color: rgb(31, 101, 128);  /* Blue background color */
     color: white;            /* White font color */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition effect for smooth color change */
 }
