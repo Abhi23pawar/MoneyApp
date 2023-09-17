@@ -6,7 +6,6 @@ import Register from "./pages/Register.js";
 import React from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar.js';
-import Dashboard from './pages/Dashboard.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import GoalsPage from './pages/GoalsPage.jsx';
 import LiteracyPage from "./pages/Literacy.jsx";
@@ -26,6 +25,13 @@ function App() {
     <>
     <Sidebar>
       <Routes>
+          <Route
+           path="/" element={
+          <ProtectedRoutes>
+          <HomePage />
+          </ProtectedRoutes>
+          } />
+
          <Route
           path="/budget"
           element={
@@ -34,10 +40,9 @@ function App() {
           </ProtectedRoutes>
           }
         />
-        {/*  </ProtectedRoutes> */}
+        
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profilepage" element={<ProfilePage />} />
         <Route path="/goalsPage" element={<GoalsPage />} />
         <Route path="/literacy" element={<LiteracyPage />} />
@@ -49,9 +54,7 @@ function App() {
         <Route path="/literacypage/financialindependence" element={<FinancialIndependence />} />
         <Route path="/literacypage/longterminvestment" element={<LongTermInvestment />} />
         <Route path="/literacypage/savingforretirement" element={<SavingForRetirement />} />
-      
         
-        <Route path="/" element={<Dashboard />} />
       </Routes>
 
       </Sidebar>

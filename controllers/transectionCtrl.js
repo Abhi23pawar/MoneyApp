@@ -22,7 +22,7 @@ const getAllTransection = async (req, res) => {
     res.status(200).json(transections);
   } catch (error) {
     console.log(error);
-    res.status(500).json(erorr);
+    res.status(500).json(error);
   }
 };
 
@@ -41,7 +41,7 @@ const editTransection = async (req, res) => {
       { _id: req.body.transacationId },
       req.body.payload
     );
-    res.status(200).send("Edit Successfully");
+    res.status(200).send("Transaction Edited");
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -50,8 +50,7 @@ const editTransection = async (req, res) => {
 
 const addTransection = async (req, res) => {
   try {
-    // const newTransection = new transectionModel(req.body);
-    const newTransection = new transectionModel(req.body);
+   const newTransection = new transectionModel(req.body);
     await newTransection.save();
     res.status(201).send("Transection Created");
   } catch (error) {
@@ -61,8 +60,8 @@ const addTransection = async (req, res) => {
 };
 
 module.exports = {
-  getAllTransection,
-  addTransection,
+   addTransection,
   editTransection,
   deleteTransection,
+  getAllTransection,
 };

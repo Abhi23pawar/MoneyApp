@@ -9,11 +9,7 @@ const Sidebar = ({children}) => {
     const[isOpen ,setIsOpen] = useState(true);
     const toggle = () => setIsOpen (!isOpen);
     const menuItem = [
-        {
-          path: '/',
-          name: 'Dashboard',
-          icon: <FontAwesomeIcon icon={faTrophy} />,
-        },
+        
         {
           path: '/budget',
           name: 'Budget',
