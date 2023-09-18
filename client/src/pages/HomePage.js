@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Form, Input, message, Modal, Select, Table, DatePicker } from "antd";
 import {
   UnorderedListOutlined,
-  AreaChartOutlined,
   EditOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
@@ -10,7 +9,6 @@ import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import Spinner from "./../components/Spinner";
 import moment from "moment";
-import Analytics from "../components/Analytics";
 const { RangePicker } = DatePicker;
 
 const HomePage = () => {
@@ -172,12 +170,12 @@ const HomePage = () => {
             }`}
             onClick={() => setViewData("table")}
           />
-          <AreaChartOutlined
+          {/*<AreaChartOutlined 
             className={`mx-2 ${
               viewData === "analytics" ? "active-icon" : "inactive-icon"
             }`}
             onClick={() => setViewData("analytics")}
-          />
+          /> */}
         </div>
         <div>
           <button
@@ -189,11 +187,12 @@ const HomePage = () => {
         </div>
       </div>
       <div className="content">
-        {viewData === "table" ? (
+      <Table columns={columns} dataSource={allTransection} />
+       {/*} {viewData === "table" ? (
           <Table columns={columns} dataSource={allTransection} />
         ) : (
           <Analytics allTransection={allTransection} />
-        )}
+        )} */}
       </div>
       <Modal
         title={editable ? "Edit Transaction" : "Add Transection"}

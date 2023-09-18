@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
-import { Modal, Form, Input, DatePicker, Button } from 'antd';
+import { Select, Modal, Form, Input, DatePicker, Button } from 'antd';
 
 const GoalForm = ({ onClose, goal }) => {
   const [form] = Form.useForm();
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleFormSubmit = (values) => {
-    // Call API to save goal data to the backend
-    // You'll need to implement this part
-    // After successful submission, you can call onClose() to close the form
+    
     setIsSubmitted(true);
-    // onClose(); // Uncomment this line if you want to close the form after submission
+    // onClose();
   };
 
   const handleClose = () => {
     onClose();
-    setIsSubmitted(false); // Reset the submission state when the form is closed
+    setIsSubmitted(false); 
   };
 
   return (
     <Modal
-      visible={true} // Set to true to show the modal
-      title={`Goal: ${goal.title}`} // Display the goal title from the parent component
+      visible={true}
+      title={`Goal: ${goal.title}`} 
       onCancel={handleClose}
-      footer={null} // Remove the footer (including the close button)
+      footer={null} 
     >
       <Form form={form} onFinish={handleFormSubmit}>
         <Form.Item label="Goal Amount" name="amount">
@@ -38,9 +36,17 @@ const GoalForm = ({ onClose, goal }) => {
           <Input.TextArea />
         </Form.Item>
 
-        <Form.Item label="Reminder Interval" name="reminderInterval">
-          <Input />
-        </Form.Item>
+        <Form.Item
+            name="reminder"
+            label="Reminder Interval"
+            rules={[{ required: true, message: "Please select a duration" }]}
+          >
+            <Select placeholder="Select a duration">
+              <Select.Option value="daily">Daily</Select.Option>
+              <Select.Option value="weekly">Weekly</Select.Option>
+              <Select.Option value="monthly">Monthly</Select.Option>
+            </Select>
+          </Form.Item>
 
         <Form.Item>
           <Button type="primary" htmlType="submit" className={isSubmitted ? 'submitted' : ''}>
