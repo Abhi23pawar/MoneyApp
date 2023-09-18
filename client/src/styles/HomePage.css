@@ -2,12 +2,12 @@
 
 .filters-and-content {
   display: flex;
-  flex-direction: column; /* Stack child elements vertically */
-  gap: 20px; /* Add spacing between filters and content */
-  width: 100%;
+  flex-direction: column; 
+  gap: 20px; 
+  width: 10px;
 }
 
-.filters-and-content, .filters, .filters > div, .content {
+.filters-and-content .filters, .filters > div, .content {
   width: 100%;
   max-width: 100%;
 }
@@ -18,22 +18,22 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
-  width: 100%; /* Ensure the container takes the full width */
+  width: 100%; 
 }
 
 .filters > div {
-  flex: 1; /* This will allow each div in the filters to grow equally, filling the space */
+  flex: 1; 
 }
 
 .switch-icons {
   display: flex;
   justify-content: space-between;
-  flex-grow: 0; /* This will prevent the switch icons from growing and taking up extra space */
+  flex-grow: 0; 
 }
 
 .content {
   margin-top: 20px;
-  width: 100%; /* Ensure the content takes the full width */
+  width: 100%;
 }
 
 .create-budget-button {

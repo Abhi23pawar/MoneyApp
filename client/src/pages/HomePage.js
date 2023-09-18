@@ -21,7 +21,7 @@ const HomePage = () => {
   const [viewData, setViewData] = useState("table");
   const [editable, setEditable] = useState(null);
 
-  //table data
+  
   const columns = [
     {
       title: "Date",
@@ -65,9 +65,7 @@ const HomePage = () => {
     },
   ];
 
-  //getall transactions
-
-    //useEffect Hook
+  
     useEffect(() => {
       const getAllTransactions = async () => {
         try {
@@ -88,7 +86,7 @@ const HomePage = () => {
     getAllTransactions();
   }, [frequency, selectedDate, type, setAllTransection]);
 
-  //delete handler
+
   const handleDelete = async (record) => {
     try {
       setLoading(true);
@@ -104,7 +102,7 @@ const HomePage = () => {
     }
   };
 
-  // form handling
+  
   const handleSubmit = async (values) => {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
@@ -170,12 +168,7 @@ const HomePage = () => {
             }`}
             onClick={() => setViewData("table")}
           />
-          {/*<AreaChartOutlined 
-            className={`mx-2 ${
-              viewData === "analytics" ? "active-icon" : "inactive-icon"
-            }`}
-            onClick={() => setViewData("analytics")}
-          /> */}
+          
         </div>
         <div>
           <button
@@ -188,11 +181,7 @@ const HomePage = () => {
       </div>
       <div className="content">
       <Table columns={columns} dataSource={allTransection} />
-       {/*} {viewData === "table" ? (
-          <Table columns={columns} dataSource={allTransection} />
-        ) : (
-          <Analytics allTransection={allTransection} />
-        )} */}
+       
       </div>
       <Modal
         title={editable ? "Edit Transaction" : "Add Transection"}
